@@ -1,5 +1,5 @@
-var navigationMenu = require('./PageObjects/navigationMenu.js');
-var baseSteps = require('./PageObjects/baseSteps.js');
+var navigationMenu = require('../PageObjects/navigationMenu.js');
+var baseSteps = require('../PageObjects/baseSteps.js');
 
 // spec.js
 describe('Protractor with non-Angular app demo', function() {

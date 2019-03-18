@@ -7,7 +7,7 @@ exports.config = {
     directConnect: true,
     framework: 'jasmine',
     seleniumAddress: 'http://localhost:4444/wd/hub',
-    specs: ['navigationTests.js'],
+    specs: ['./specs/navigationTests.js'],
     baseUrl: 'https://www.joinpiggy.com',
     multiCapabilities: [ {
         browserName: 'chrome',
