@@ -9,23 +9,29 @@ describe('Protractor with non-Angular app demo', function() {
         baseSteps.openHomePage();
     });
 
-    it('should have a title', function() {  
-      expect(browser.getTitle()).toEqual('Automatic Coupons, Huge Sales, and Cash back! - Piggy');
-    });
+    describe('Data driven test for navigation menu', function() {
+      var menuItems =  [
+        { menuItem: 'Coupons', pageTitle: 'Coupons & Sales' }, 
+        { menuItem: 'Stores', pageTitle: 'Browse by Store' }
+      ];
 
-    it('should navigate to Chrome Extension App', function() {
-      navigationMenu.clickAppNavigationLink();
-      baseSteps.swithToNewOpenedWindow();
-      expect(baseSteps.getCurrentUrl()).toEqual('https://chrome.google.com/webstore/detail/piggy-automatic-coupons-c/hfapbcheiepjppjbnkphkmegjlipojba?hl=en');              
-    });
-   
-    it('should navigate to Coupons page', function() {
-        navigationMenu.clickCouponLink();
-        expect(baseSteps.getCurrentUrl()).toEqual('https://www.joinpiggy.com/coupons');
-    });
+      menuItems.forEach((obj) => {
+        var title = obj.pageTitle;
+        var menuName = obj.menuItem;
 
-    it('should navigate to Cashback-stores page', function() {
-        navigationMenu.clickStoresLink();
-        expect(baseSteps.getCurrentUrl()).toEqual('https://www.joinpiggy.com/cashback-stores');
-    });
+        it(`should have ${ title } when navigate to ${ menuName }`, function() {
+          navigationMenu.clickNavigationMenuItem(menuName);
+          expect(title).toEqual(baseSteps.getPageTitle());              
+        }); 
+      })
+
+      it(`should have 'Piggy - Coupons and Cash Back - Apps on Google Play' when navigate to Get the App!`, function() {
+        navigationMenu.clickNavigationMenuItem('Get the App!');
+        baseSteps.swithToNewOpenedWindow();
+        expect('Piggy - Automatic Coupons & Cash Back - Chrome Web Store').toEqual(baseSteps.getPageTitle());              
+      });
+
+    })
+
+    
   });

@@ -9,6 +9,10 @@ var NavigationMenu = function() {
               return text === 'Stores';
             });
         }).first();
+    
+    this.clickNavigationMenuItem = function(menuName) {
+        element(by.xpath(`//div[@class='drawer']//ul[1]//a[.='${ menuName }']`)).click();
+    }
 
     const getTheAppNavigationLink = element(by.css('li#get-the-app>a'));
 

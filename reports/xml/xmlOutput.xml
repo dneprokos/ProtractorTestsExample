@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites disabled="0" errors="0" failures="0" tests="4" time="7.036">
- <testsuite name="Protractor with non-Angular app demo" timestamp="2019-03-18T16:55:02" hostname="localhost" time="7.036" errors="0" tests="4" skipped="0" disabled="0" failures="0">
-  <testcase classname="Protractor with non-Angular app demo" name="should have a title" time="1.918" />
-  <testcase classname="Protractor with non-Angular app demo" name="should navigate to Chrome Extension App" time="1.956" />
-  <testcase classname="Protractor with non-Angular app demo" name="should navigate to Coupons page" time="1.878" />
-  <testcase classname="Protractor with non-Angular app demo" name="should navigate to Cashback-stores page" time="1.282" />
+<testsuites disabled="0" errors="0" failures="0" tests="3" time="12.418">
+ <testsuite name="Protractor with non-Angular app demo" timestamp="2019-03-21T11:11:27" hostname="localhost" time="6.209" errors="0" tests="0" skipped="0" disabled="0" failures="0">
+ </testsuite>
+ <testsuite name="Protractor with non-Angular app demo.Data driven test for navigation menu" timestamp="2019-03-21T11:11:27" hostname="localhost" time="6.209" errors="0" tests="3" skipped="0" disabled="0" failures="0">
+  <testcase classname="Protractor with non-Angular app demo.Data driven test for navigation menu" name="should have Coupons &amp; Sales when navigate to Coupons" time="2.813" />
+  <testcase classname="Protractor with non-Angular app demo.Data driven test for navigation menu" name="should have Browse by Store when navigate to Stores" time="1.355" />
+  <testcase classname="Protractor with non-Angular app demo.Data driven test for navigation menu" name="should have &apos;Piggy - Coupons and Cash Back - Apps on Google Play&apos; when navigate to Get the App!" time="2.041" />
  </testsuite>
 </testsuites>
