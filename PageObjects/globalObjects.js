@@ -1,4 +1,4 @@
-var BaseSteps = function() {
+var GlobalObjects = function() {
     this.openHomePage = function() {
         browser.get('/');
     }
@@ -18,4 +18,4 @@ var BaseSteps = function() {
     }
 }
 
-module.exports = new BaseSteps();
+module.exports = new GlobalObjects();

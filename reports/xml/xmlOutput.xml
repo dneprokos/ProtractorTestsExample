@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites disabled="0" errors="0" failures="0" tests="3" time="12.418">
- <testsuite name="Protractor with non-Angular app demo" timestamp="2019-03-21T11:11:27" hostname="localhost" time="6.209" errors="0" tests="0" skipped="0" disabled="0" failures="0">
- </testsuite>
- <testsuite name="Protractor with non-Angular app demo.Data driven test for navigation menu" timestamp="2019-03-21T11:11:27" hostname="localhost" time="6.209" errors="0" tests="3" skipped="0" disabled="0" failures="0">
-  <testcase classname="Protractor with non-Angular app demo.Data driven test for navigation menu" name="should have Coupons &amp; Sales when navigate to Coupons" time="2.813" />
-  <testcase classname="Protractor with non-Angular app demo.Data driven test for navigation menu" name="should have Browse by Store when navigate to Stores" time="1.355" />
-  <testcase classname="Protractor with non-Angular app demo.Data driven test for navigation menu" name="should have &apos;Piggy - Coupons and Cash Back - Apps on Google Play&apos; when navigate to Get the App!" time="2.041" />
+<testsuites disabled="0" errors="0" failures="0" tests="3" time="6.213">
+ <testsuite name="Navigation menu tests" timestamp="2019-03-22T10:54:38" hostname="localhost" time="6.213" errors="0" tests="3" skipped="0" disabled="0" failures="0">
+  <testcase classname="Navigation menu tests" name="Title should have &quot;Coupons &amp; Sales&quot; when navigate to &quot;Coupons&quot; menu" time="3.284" />
+  <testcase classname="Navigation menu tests" name="Title should have &quot;Browse by Store&quot; when navigate to &quot;Stores&quot; menu" time="1.327" />
+  <testcase classname="Navigation menu tests" name="Title should have &quot;Piggy - Coupons and Cash Back - Apps on Google Play&quot; when navigate to &quot;Get the App!&quot; menu" time="1.602" />
  </testsuite>
 </testsuites>

@@ -1,6 +1,5 @@
-var NavigationMenu = function() {
+var NavigationObjects = function() {
     //Selectors
-    // //li[@class="coupons-store"]/a[.='Coupons']
     const couponsNavigationLink = element(by.xpath(`//li[@class="coupons-store"]/a[.='Coupons']`));
 
     const storesNavigationLink = element.all(by.css('li.coupons-store>a'))
@@ -10,11 +9,11 @@ var NavigationMenu = function() {
             });
         }).first();
     
-    this.clickNavigationMenuItem = function(menuName) {
-        element(by.xpath(`//div[@class='drawer']//ul[1]//a[.='${ menuName }']`)).click();
-    }
-
     const getTheAppNavigationLink = element(by.css('li#get-the-app>a'));
+
+    const loginPopupWindow = element(by.xpath(`//div[@class='modal fade form-modal login-modal in']`));
+
+    const createAccountPopupWindow = element(by.xpath(`//div[@class='modal fade form-modal join-modal in']`));
 
     //Methods    
     this.clickCouponLink = function() {
@@ -28,8 +27,12 @@ var NavigationMenu = function() {
     this.clickAppNavigationLink = function() {
         getTheAppNavigationLink.click();
     }
+
+    this.clickNavigationMenuItem = function(menuName) {
+        element(by.xpath(`//div[@class='drawer']//ul[1]//a[.='${ menuName }']`)).click();
+    }
 }
 
     
 
-module.exports = new NavigationMenu();
+module.exports = new NavigationObjects();
